@@ -68,9 +68,20 @@ while q not in range(1, 5):
     print()
     print('Номер четверти принимает значения от 1 до 4!')
     q = int(input('Введите номер четверти Q: '))
-
+text_x = 'Координата X точки'
+text_y = 'Координата Y точки'
 if q == 1:
-    print('x =', range(0, 10))
+    print(text_x, '> 0')
+    print(text_y, '> 0')
+elif q == 2:
+    print(text_x, '< 0')
+    print(text_y, '> 0')
+elif q == 3:
+    print(text_x, '< 0')
+    print(text_y, '< 0')
+else:
+    print(text_x, '> 0')
+    print(text_y, '< 0')
 
 print('--------------- | TASK 5 | --------------------')
 
