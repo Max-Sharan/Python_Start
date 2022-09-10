@@ -24,12 +24,12 @@ print('--------------- | TASK 2 | --------------------')
 # 7. Напишите программу для проверки истинности утверждения
 # ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
 
-for x in range(0, 2):
-    for y in range(0, 2):
-        for z in range(0, 2):
-            left = not (x or y or z)
-            right = not x and not y and not z
-            print(left == right)
+# for x in range(0, 2):
+#     for y in range(0, 2):
+#         for z in range(0, 2):
+#             left = not (x or y or z)
+#             right = not x and not y and not z
+#             print(left == right)
 
 print('--------------- | TASK 3 | --------------------')
 
@@ -40,6 +40,23 @@ print('--------------- | TASK 3 | --------------------')
 # - x=34; y=-30 -> 4
 # - x=2; y=4-> 1
 # - x=-34; y=-30 -> 3
+
+x = int(input('Введите координату X: '))
+y = int(input('Введите координату Y: '))
+
+while x == 0 or y == 0:
+    print()
+    print('Введите не нулевые значения!')
+    x = int(input('Введите координату X: '))
+    y = int(input('Введите координату Y: '))
+if x > 0 and y > 0:
+    print('Ваша точка находится в 1й четверти!')
+elif x < 0 and y > 0:
+    print('Ваша точка находится во 2й четверти!')
+elif x < 0 and y < 0:
+    print('Ваша точка находится в 3й четверти!')
+else:
+    print('Ваша точка находится в 4й четверти!')
 
 print('--------------- | TASK 4 | --------------------')
 
