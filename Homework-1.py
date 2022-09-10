@@ -5,6 +5,9 @@
 # - 6 -> да
 # - 7 -> да
 # - 1 -> нет
+from cmath import sqrt
+
+
 print('--------------- | TASK 1 | --------------------')
 
 n = int(input('Введите число, обозначающее день недели: '))
@@ -24,12 +27,12 @@ print('--------------- | TASK 2 | --------------------')
 # 7. Напишите программу для проверки истинности утверждения
 # ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
 
-# for x in range(0, 2):
-#     for y in range(0, 2):
-#         for z in range(0, 2):
-#             left = not (x or y or z)
-#             right = not x and not y and not z
-#             print(left == right)
+for x in range(0, 2):
+    for y in range(0, 2):
+        for z in range(0, 2):
+            left = not (x or y or z)
+            right = not x and not y and not z
+            print(left == right)
 
 print('--------------- | TASK 3 | --------------------')
 
@@ -91,3 +94,14 @@ print('--------------- | TASK 5 | --------------------')
 # Пример:
 # - A (3,6); B (2,1) -> 5,09
 # - A (7,-5); B (1,-1) -> 7,21
+
+print('Введите координаты 1й точки')
+x1 = int(input('Введите координату X: '))
+y1 = int(input('Введите координату Y: '))
+
+print('Введите координаты 2й точки')
+x2 = int(input('Введите координату X: '))
+y2 = int(input('Введите координату Y: '))
+
+dist_ab = ((x2 - x1)**2 + (y2 - y1)**2)**0.5
+print(round(dist_ab, 2))
